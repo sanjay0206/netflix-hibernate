@@ -1,0 +1,18 @@
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection details go here -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hbm2ddl.auto">create-drop</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/netflix</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">java@2021</property>
+
+        <!-- Package to scan for entity classes -->
+        <mapping class="com.netflix.entities.User"/>
+        <mapping class="com.netflix.entities.Content"/>
+        <mapping class="com.netflix.entities.Watchlist"/>
+        <property name="show_sql">true</property>
+
+
+    </session-factory>
+</hibernate-configuration>
